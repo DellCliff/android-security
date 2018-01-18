@@ -10,7 +10,19 @@ Apps will get decompiled.
 No passwords in source code! Will probably be committed to GIT at some point.  
 
 ## Certificate Pinning
-
-
+```
+String hostname = "publicobject.com";
+CertificatePinner certificatePinner = new CertificatePinner.Builder()
+    .add(hostname, "sha256/AAAAAAAAAAAAAAAAAAAAA=")
+    .build();
+OkHttpClient client = OkHttpClient.Builder()
+    .certificatePinner(certificatePinner)
+    .build();
+    
+Request request = new Request.Builder()
+    .url("https:// + hostname")
+    .build();
+client.newCall(request).execute();
+```
 ## Tampering Detection
 
