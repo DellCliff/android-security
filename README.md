@@ -1,6 +1,6 @@
 # android-security
 
-[1] https://www.youtube.com/watch?v=ShkUoLy0ZFE  
+https://www.youtube.com/watch?v=ShkUoLy0ZFE  
 https://androidsecurity.info/  
 https://github.com/mplacona  
 https://www.placona.co.uk/  
@@ -156,3 +156,11 @@ static boolean isDebuggable(Context context) {
 ```  
 
 Do not trust the device!  
+
+## Things to Use
+
+Proguard:  
+Name Obfuscation, Code Optimisation, Free  
+
+DexGuard:  
+Class Encryption, Call Hiding through Reflection, String Encryption, Certificate Checks, Debug Detection, Emulator Detection, Root Detection, Tamper Detection, Costs $$$
