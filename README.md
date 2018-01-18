@@ -93,7 +93,7 @@ public boolean isHacked(Context context, String myPackageName, String google, St
   return false; 
 }
 ```  
-Signature checking:
+Signature checking. Changes on recompiles, but again, can be completely be removed by hackers.
 ```
 final int VALID = 0;
 final int INVALID = 1;
