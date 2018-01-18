@@ -5,6 +5,8 @@ https://androidsecurity.info/
 https://github.com/mplacona  
 https://www.placona.co.uk/  
 
+Encrypt all the values.  
+
 ## Certificate Pinning
 
 
