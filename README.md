@@ -118,4 +118,5 @@ public static int checkAppSignature(Context context) {
     }
     return INVALID;
 }
-```
+```  
+Do not trust the device!  
