@@ -6,8 +6,7 @@ https://github.com/mplacona
 https://www.placona.co.uk/  
 https://developer.android.com/training/safetynet/index.html  
 
-Do not trust the device!  
-Android Keystore since API level 23 with strong encryption (since API level 18 with "weak" encryption). TODO: Look into this more.    
+Do not trust the device!     
 
 ## Certificate Pinning
 Makes sure your app only communicates with your server.  
@@ -181,4 +180,6 @@ Can check:
   
 Network Security Configuration:  
 https://developer.android.com/training/articles/security-config.html  
-Does certificate pinning.
+Does certificate pinning.  
+  
+Android Keystore since API level 23 with strong encryption (since API level 18 with "weak" encryption). TODO: Look into this more.
