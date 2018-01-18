@@ -92,4 +92,30 @@ public boolean isHacked(Context context, String myPackageName, String google, St
   }
   return false; 
 }
-``` 
+```  
+Signature checking:
+```
+final int VALID = 0;
+final int INVALID = 1;
+final String APP_SIGNATURE = "4920384CE4898347602CEEC";
+
+public static int checkAppSignature(Context context) {
+    try {
+        PackageInfo packageInfo = context.getPackageManager()
+            .getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
+            
+        for (Signature signature : packageInfo.signatures) {
+            byte[] signatureBytes = signature.toByteArray();
+            MessageDigest md = MessageDigest.getInstance("SHA");
+            md.update(signature.toByteArray());
+            // compare signatures
+            if (SIGNATURE.equals(APP_SIGNATURE)) {
+                return VALID;
+            }
+        }
+    } catch (Exception ex) {
+        // Assumes an issue in checking signature, but we let the caller decide on what to do.
+    }
+    return INVALID;
+}
+```
