@@ -4,6 +4,7 @@ https://www.youtube.com/watch?v=ShkUoLy0ZFE
 https://androidsecurity.info/  
 https://github.com/mplacona  
 https://www.placona.co.uk/  
+https://developer.android.com/training/safetynet/index.html  
 
 Do not trust the device!  
 Android Keystore since API level 23 with strong encryption (since API level 18 with "weak" encryption). TODO: Look into this more.    
@@ -164,3 +165,17 @@ Name Obfuscation, Code Optimisation, Free
 
 DexGuard:  
 Class Encryption, Call Hiding through Reflection, String Encryption, Certificate Checks, Debug Detection, Emulator Detection, Root Detection, Tamper Detection, Costs $$$
+
+SafetyNet API:  
+https://developer.android.com/training/safetynet/index.html  
+Can check whether a given URL is known to be a threat.  
+Can check:  
+  Certified, genuine device that passes CTS  
+  Certified device with unlocked bootloader  
+  Genuine but uncertified device, such as when the manufacturer doesn't apply for certification  
+  Device with custom ROM (not rooted)  
+  Emulator  
+  No device (protocol emulator script)  
+  Signs of system integrity compromise, such as rooting  
+  Signs of other active attacks, such as API hooking  
+
