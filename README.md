@@ -33,7 +33,7 @@ No passwords in source code! Will probably be committed to GIT at some point.
 
 ## Tampering Detection
 
-Most of these checks can be removed by hackers if app is recompiled, so don't rely completely on those checks!  
+Do not trust the device! Most of these checks can be removed by hackers if app is recompiled, so don't rely completely on those checks!  
 
 Detect renaming.
 ```
@@ -120,3 +120,23 @@ public static int checkAppSignature(Context context) {
 }
 ```  
 Do not trust the device!  
+
+## Root Detection
+
+Do not trust the device!  
+
+Rooted devices can execute "su".  
+```
+static boolean canExecuteCommand(String command) {
+    try {
+        int exitValue = Runtime.getRuntime().exec(command).waitFor();
+        if (exitValue != 0) {
+            return false;
+        } else {
+            return true;
+        }
+    } catch (Exception e) {
+        return false;
+    }
+}
+```
