@@ -25,5 +25,9 @@ Request request = new Request.Builder()
     .build();
 client.newCall(request).execute();
 ```
+## Decompiling
+
+Apktool. Hack your own application to see what you give away.
+
 ## Tampering Detection
 
