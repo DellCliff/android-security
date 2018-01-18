@@ -8,6 +8,7 @@ https://www.placona.co.uk/
 Encrypt all the values.  
 Apps will get decompiled.  
 No passwords in source code! Will probably be committed to GIT at some point.  
+Do not trust the device!  
 
 ## Certificate Pinning
 ```
