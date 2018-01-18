@@ -182,4 +182,6 @@ Network Security Configuration:
 https://developer.android.com/training/articles/security-config.html  
 Does certificate pinning.  
   
-Android Keystore since API level 23 with strong encryption (since API level 18 with "weak" encryption). TODO: Look into this more.
+Android Keystore:  
+Since API level 23 with strong encryption (since API level 18 with "weak" encryption).  
+TODO: Look into this more.
