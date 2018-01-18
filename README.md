@@ -5,9 +5,6 @@ https://androidsecurity.info/
 https://github.com/mplacona  
 https://www.placona.co.uk/  
 
-Encrypt all the values.  
-Apps will get decompiled.  
-No passwords in source code! Will probably be committed to GIT at some point.  
 Do not trust the device!  
 Android Keystore since API level 23 with strong encryption (since API level 18 with "weak" encryption). TODO: Look into this more.    
 
@@ -28,7 +25,13 @@ client.newCall(request).execute();
 ```
 ## Decompiling
 
-Apktool. Hack your own application to see what you give away.
+Apktool. Hack your own application to see what you give away.  
+Encrypt all the values.  
+Apps will get decompiled.  
+No passwords in source code! Will probably be committed to GIT at some point.  
 
 ## Tampering Detection
 
+Detect renaming.
+```
+```
