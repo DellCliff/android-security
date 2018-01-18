@@ -9,6 +9,7 @@ Do not trust the device!
 Android Keystore since API level 23 with strong encryption (since API level 18 with "weak" encryption). TODO: Look into this more.    
 
 ## Certificate Pinning
+Makes sure your app only communicates with your server.  
 ```
 String hostname = "publicobject.com";
 CertificatePinner certificatePinner = new CertificatePinner.Builder()
