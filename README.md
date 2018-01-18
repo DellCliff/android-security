@@ -9,6 +9,7 @@ Encrypt all the values.
 Apps will get decompiled.  
 No passwords in source code! Will probably be committed to GIT at some point.  
 Do not trust the device!  
+Android Keystore since API level 23.  
 
 ## Certificate Pinning
 ```
