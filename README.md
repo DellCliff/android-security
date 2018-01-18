@@ -125,7 +125,7 @@ Do not trust the device!
 
 Do not trust the device!  
 
-Rooted devices can execute "su".  
+Rooted devices can execute "su". Again, a recompile can circumvent this check.   
 ```
 static boolean canExecuteCommand(String command) {
     try {
@@ -140,3 +140,19 @@ static boolean canExecuteCommand(String command) {
     }
 }
 ```
+XPosed injects a JAR file. Check for this JAR file.  
+TODO  
+
+Checking for emulators.  
+```
+Build.FINGERPRINT.startsWith("generic");
+```  
+
+Checking for app is debuggable.  
+```
+static boolean isDebuggable(Context context) {
+    return (context.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+}
+```  
+
+Do not trust the device!  
