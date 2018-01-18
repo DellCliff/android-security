@@ -178,4 +178,7 @@ Can check:
   No device (protocol emulator script)  
   Signs of system integrity compromise, such as rooting  
   Signs of other active attacks, such as API hooking  
-
+  
+Network Security Configuration:  
+https://developer.android.com/training/articles/security-config.html  
+Does certificate pinning.
