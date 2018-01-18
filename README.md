@@ -32,6 +32,8 @@ No passwords in source code! Will probably be committed to GIT at some point.
 
 ## Tampering Detection
 
+Most of these checks can be removed by hackers if app is recompiled, so don't rely completely on those checks!  
+
 Detect renaming.
 ```
 private static final String PACKAGE_NAME = "info.androidsecurity.helloworld";
@@ -67,5 +69,26 @@ if (installer.compareTo(GOOGLE_PLAY) != 0 && installer.compareTo(AMAZON_STORE) !
         - make an HTTP request to your own server and alert you
     */
 }
-``` 
+```  
+Combined:
+```
+public boolean isHacked(Context context, String myPackageName, String google, String amazon)
+{
+  //Renamed?
+  if (context.getPackageName().compareTo(myPackageName) != 0) {
+      return true; // BOOM!
+  }
 
+  //Relocated?
+  String installer = context.getPackageManager().getInstallerPackageName(myPackageName);
+
+  if (installer == null){
+      return true; // BOOM!
+  }
+
+  if (installer.compareTo(google) != 0 && installer.compareTo(amazon) != 0){
+    return true; // BOOM!
+  }
+  return false; 
+}
+``` 
