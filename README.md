@@ -19,7 +19,7 @@ CertificatePinner certificatePinner = new CertificatePinner.Builder()
 OkHttpClient client = OkHttpClient.Builder()
     .certificatePinner(certificatePinner)
     .build();
-    
+
 Request request = new Request.Builder()
     .url("https:// + hostname")
     .build();
